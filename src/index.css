@@ -1,0 +1,197 @@
+/* --- Global Variables & Reset --- */
+:root {
+  --primary-blue: #008ecc;
+  --bg-card: #f8f9fa;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+.text-primary-blue {
+  color: var(--primary-blue) !important;
+}
+
+.bg-primary-blue {
+  background-color: var(--primary-blue) !important;
+}
+
+.fw-extrabold {
+  font-weight: 800;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* --- Categories Header --- */
+.category-btn {
+  border: 1px solid transparent;
+  background-color: transparent;
+  color: #495057;
+  transition: all 0.2s ease;
+}
+
+.category-btn:hover {
+  background-color: #e9ecef;
+}
+
+.category-btn.active {
+  background-color: var(--primary-blue) !important;
+  color: #ffffff !important;
+}
+
+/* --- Section Header Line --- */
+.active-title-line {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 120px;
+  height: 3px;
+  background-color: var(--primary-blue);
+  border-radius: 2px;
+}
+
+/* --- Hero Banner Dots --- */
+.hero-dot-btn {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-dot-btn:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.hero-dot-btn.active {
+  width: 26px;
+  border-radius: 12px;
+  background-color: #ffffff;
+}
+
+/* --- Product Cards --- */
+.bg-light-card {
+  background-color: var(--bg-card);
+  border: 1.5px solid transparent;
+  transition: all 0.25s ease-in-out;
+}
+
+.product-card {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  background-color: #ffffff;
+  border-color: var(--primary-blue);
+  box-shadow: 0 10px 20px rgba(0, 142, 204, 0.12) !important;
+}
+
+.discount-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--primary-blue);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-top-right-radius: 14px;
+  border-bottom-left-radius: 12px;
+}
+
+.product-img-wrapper {
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-img {
+  max-height: 130px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-img {
+  transform: scale(1.05);
+}
+
+/* --- Category Circles --- */
+.category-circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: var(--bg-card);
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 auto 10px auto;
+  border: 2px solid transparent;
+  transition: all 0.25s ease;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.category-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.category-circle.active,
+.category-item:hover .category-circle {
+  border-color: var(--primary-blue);
+  background-color: #ffffff;
+  box-shadow: 0 6px 14px rgba(0, 142, 204, 0.15);
+  transform: translateY(-4px);
+}
+
+/* --- Brands & Daily Essentials --- */
+.brand-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.brand-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.essential-card {
+  border: 1.5px solid transparent;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.essential-card:hover {
+  border-color: var(--primary-blue);
+  background-color: #ffffff;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 142, 204, 0.12);
+}
+
+/* --- Footer Styling --- */
+.footer-section {
+  background-color: var(--primary-blue, #008ecc);
+  color: #ffffff;
+}
+
+.footer-list li {
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.footer-list li:hover {
+  opacity: 1 !important;
+  transform: translateX(4px);
+}
